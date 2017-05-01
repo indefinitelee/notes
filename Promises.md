@@ -12,13 +12,13 @@ A promise can be:<sup>[2](#2)</sup>
 * settled - Has fulfilled or rejected
 
 Here is a function that returns a promise which will resolve after a specified time delay: <sup>[1](#1)</sup>
-```
+```javascript
 const wait = time => new Promise((resolve) => setTimeout(resolve, time));
 
 wait(3000).then(() => console.log('Hello!')); // 'Hello!' 
 ```
 ###Rewritten in ES5: 
-```
+```javascript
 var wait = function wait(time) {
  return new Promise ( function (resolve) {
   return setTimeout(resolve, time)
